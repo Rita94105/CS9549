@@ -12,7 +12,7 @@ const AccountBalance = () => {
     const fetchBalances = async () => {
       try {
         const token = localStorage.getItem('token');
-        const res = await axios.get('http://localhost:7788/api/auth/balance', {
+        const res = await axios.get('http://44.203.41.165:7788/api/auth/balance', {
           headers: { Authorization: `Bearer ${token}` },
         });
         setBalances(res.data.balances);
@@ -30,7 +30,7 @@ const AccountBalance = () => {
     try {
       const token = localStorage.getItem('token');
       const res = await axios.put(
-        'http://localhost:7788/api/auth/balance',
+        'http://44.203.41.165:7788/api/auth/balance',
         { currency, amount },
         { headers: { Authorization: `Bearer ${token}` } }
       );
