@@ -1,70 +1,115 @@
-# Getting Started with Create React App
+# My Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Introduction
 
-## Available Scripts
+This is a full-stack application built with React and Node.js, featuring user registration, login, user profile management, and account balance inquiry functionalities.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- User Registration
+- User Login
+- User Profile Management
+- Account Balance Inquiry
+- Real-time and Historical Exchange Rates
+- Forex News
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Tech Stack
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Frontend: React, Axios, React Router
+- Backend: Node.js, Express, MongoDB, Mongoose, JWT, bcrypt
+- Styling: CSS, Flexbox
 
-### `npm test`
+## Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Frontend
 
-### `npm run build`
+1. Navigate to the frontend directory:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   ```bash
+   cd frontend
+2. Install dependencies:
+   ```
+   npm install
+   ```
+3. Start the frontend development server:
+   ```
+   npm start
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Backend
+1. Navigate to the backend directory:
+   ```
+   cd backend
+   ```
+2. Install dependencies:
+   ```
+   npm install
+   ```
+3. Start the backend server:
+   ```
+   npm start
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Environment Variables
 
-### `npm run eject`
+Create a .env file in the backend directory and add the following content:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+CORS_ORIGIN=http://localhost:3000
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Usage
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Registration
+  1. Open your browser and navigate to http://localhost:3000/signup
+  2. Fill out the registration form and submit
+- Login
+  1. Open your browser and navigate to http://localhost:3000/
+  2. Fill out the login form and submit
+- User Profile Management
+  1. After logging in, navigate to http://localhost:3000/profile
+  2. View and edit user profile
+- Account Balance Inquiry
+  1. After logging in, navigate to http://localhost:3000/balance
+  2. View account balances
+- Real-time and Historical Rate Selection
+  - https://application-a1.1p0sj4mn37zu.ca-tor.codeengine.appdomain.cloud/
+- Forex News
+  - 
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Project Structure
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
+my-project/
+├── backend/
+│   ├── models/
+│   │   └── User.js
+│   ├── routes/
+│   │   ├── [auth.js](http://_vscodecontentref_/1)
+│   │   └── userProfile.js
+│   ├── .env
+│   ├── server.js
+│   └── package.json
+├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── LoginForm.js
+│   │   │   ├── SignupForm.js
+│   │   │   ├── UserProfile.js
+│   │   │   ├── AccountBalance.js
+│   │   │   └── HomePage.js
+│   │   ├── assets/
+│   │   │   └── styles/
+│   │   │       ├── LoginForm.css
+│   │   │       ├── UserProfile.css
+│   │   │       ├── AccountBalance.css
+│   │   │       └── HomePage.css
+│   │   ├── App.js
+│   │   └── index.js
+│   ├── public/
+│   ├── package.json
+│   └── .env
+└── [README.md](http://_vscodecontentref_/2)
+```
