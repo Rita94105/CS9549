@@ -21,7 +21,7 @@ const HomePage = () => {
         </a>
         <button className="home-button" onClick={goToBalance}>Account Balance(S4)</button>
         <button className="home-button" onClick={goToProfile}>User Data Management(S3)</button>
-        <button className="home-button">S5</button>
+        <button className="home-button">Forex News(S5)</button>
       </div>
     </div>
   );
