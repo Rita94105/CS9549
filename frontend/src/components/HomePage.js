@@ -21,7 +21,9 @@ const HomePage = () => {
         </a>
         <button className="home-button" onClick={goToBalance}>Account Balance(S4)</button>
         <button className="home-button" onClick={goToProfile}>User Data Management(S3)</button>
-        <button className="home-button">Forex News(S5)</button>
+        <a href="https://service05.1p0sj4mn37zu.ca-tor.codeengine.appdomain.cloud/" className="home-button" target="_blank" rel="noopener noreferrer">
+          Forex NEWS (S5)
+        </a>
       </div>
     </div>
   );
