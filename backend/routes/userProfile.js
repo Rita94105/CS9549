@@ -15,7 +15,7 @@ const verifyToken = (req, res, next) => {
 
   try {
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
-    console.log(decoded);
+    console.log('JWT'+decoded);
     req.user = decoded;  // 在請求中保存用戶的資訊
     next();  // 讓路由處理函數繼續執行
   } catch (err) {
@@ -24,9 +24,9 @@ const verifyToken = (req, res, next) => {
 };
 
 // 取得用戶資料
-router.get('/profile/:username', async (req, res) => {
+/*router.get('/profile/:username', async (req, res) => {
     try {
-        console.log('aaa'+req.params.username);
+        console.log('username'+req.params.username);
       const user = await User.findOne({ username: req.params.username }).select('-password'); // 不返回密碼
       if (!user) return res.status(404).json({ error: 'User not found' });
   
@@ -36,27 +36,26 @@ router.get('/profile/:username', async (req, res) => {
         joined: user.createdAt
       });
     } catch (err) {
-      console.error(err);
+      console.error(req.params.username);
       res.status(500).json({ error: 'Error fetching user profile' });
     }
-  });
+  });*/
 
 // 取得用戶資料
-/*router.get('/profile', verifyToken, async (req, res) => {
+router.get('/profile', verifyToken, async (req, res) => {
   try {
     console.log(req);
-    const user = await User.findById(req.user.id).select('-password'); // 不返回密碼
+    const user = await User.findOne({_id: req.user._id}).select('-password'); // 不返回密碼
     if (!user) return res.status(404).json({ error: 'User not found' });
 
     res.json({
       email: user.email,
-      username: user.username,
-      joined: user.createdAt
+      username: user.username
     });
   } catch (err) {
     res.status(500).json({ error: 'Error fetching user profile' });
   }
-});*/
+});
 
 // 更新用戶資料
 router.put('/profile', verifyToken, async (req, res) => {

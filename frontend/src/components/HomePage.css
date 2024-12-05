@@ -1,39 +1,51 @@
-/* src/assets/styles/HomePage.css */
+body, html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+
 .home-page {
-    text-align: center;
-    padding: 50px;
-    background-color: #f0f0f0;
-    height: 100vh;
-  }
-  
-  h1 {
-    font-size: 2.5rem;
-    color: #333;
-    margin-bottom: 30px;
-  }
-  
-  .buttons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-  }
-  
-  .home-button {
-    padding: 15px 30px;
-    font-size: 1.2rem;
-    color: white;
-    background-color: #007bff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .home-button:hover {
-    background-color: #0056b3;
-  }
-  
-  .home-button:focus {
-    outline: none;
-  }
-  
+  text-align: center;
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.home-page h1 {
+  margin-bottom: 30px;
+  font-size: 32px;
+  color: #333;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home-button {
+  display: inline-block;
+  margin: 10px;
+  padding: 15px 30px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.home-button:hover {
+  background-color: #0056b3;
+}
+
+.home-button:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}

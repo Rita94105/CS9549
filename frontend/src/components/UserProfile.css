@@ -1,45 +1,44 @@
 /* src/assets/styles/UserProfile.css */
 .user-profile {
-    text-align: center;
-    padding: 50px;
-    background-color: #f9f9f9;
-    height: 100vh;
-  }
-  
-  h1 {
-    font-size: 2.5rem;
-    color: #333;
-    margin-bottom: 30px;
-  }
-  
-  .profile-info {
-    margin-bottom: 40px;
-    font-size: 1.2rem;
-    color: #555;
-  }
-  
-  .buttons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-  }
-  
-  .profile-button {
-    padding: 15px 30px;
-    font-size: 1.2rem;
-    color: white;
-    background-color: #28a745;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .profile-button:hover {
-    background-color: #218838;
-  }
-  
-  .profile-button:focus {
-    outline: none;
-  }
-  
+  text-align: center;
+  padding: 50px;
+  background-color: #f9f9f9;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.profile-info {
+  margin-bottom: 40px;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.profile-button {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  color: white;
+  background-color: #28a745;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.profile-button:hover {
+  background-color: #218838;
+}
+
+.profile-button:focus {
+  outline: none;
+}

@@ -8,16 +8,20 @@ const HomePage = () => {
   const goToProfile = () => {
     navigate('/profile'); // 重定向到用戶資料管理頁面
   };
+
+  const goToBalance = () => {
+    navigate('/balance'); // 重定向到用戶資料管理頁面
+  };
   return (
     <div className="home-page">
       <h1>Welcome to Home Page</h1>
       <div className="buttons">
       <a href="https://application-a1.1p0sj4mn37zu.ca-tor.codeengine.appdomain.cloud/" className="home-button" target="_blank" rel="noopener noreferrer">
-          S1 and S2
+          Real-time and historical exchange rates (S1, S2)
         </a>
+        <button className="home-button" onClick={goToBalance}>Account Balance(S4)</button>
+        <button className="home-button" onClick={goToProfile}>User Data Management(S3)</button>
         <button className="home-button">S5</button>
-        <button className="home-button">S6</button>
-        <button className="home-button" onClick={goToProfile}>User Profile</button>
       </div>
     </div>
   );

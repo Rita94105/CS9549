@@ -3,15 +3,16 @@ import axios from 'axios';
 import './UserProfile.css';
 
 const UserProfile = () => {
-  const [userData, setUserData] = useState(null);
+  const [userData, setUserData] =  useState({ email: 'test01@uwo.ca', username: 'test01', password: '$2b$10$zoJzd2zr1mzzjlcKG5loMe5nnGkiStf4H7XDrA2inq1mm1U5TxIM.' });
 
   useEffect(() => {
     const fetchUserData = async () => {
       try {
-        const username = localStorage.getItem('username');
-        console.log('Username:', username);
-        const res = await axios.get(`http://localhost:7788/api/user/profile/${username}`);
-        setUserData(res.data); // 假設的返回數據
+        const token = localStorage.getItem('token');
+        const res = await axios.get('http://localhost:7788/api/auth/profile', {
+          headers: { Authorization: `Bearer ${token}` },
+        });
+        setUserData(res.data);
       } catch (error) {
         console.error('Error fetching user data:', error);
       }
@@ -25,16 +26,30 @@ const UserProfile = () => {
       <h1>User Profile</h1>
       {userData ? (
         <div className="profile-info">
-          <p><strong>Email:</strong> {userData.email}</p>
-          <p><strong>Name:</strong> {userData.username}</p>
-          <p><strong>Joined:</strong> {userData.joined}</p>
+          <div className="form-group">
+            <label><strong>Email:</strong></label>
+            <input
+              type="email"
+              name="email"
+              value={userData.email}
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label><strong>Password:</strong></label>
+            <input
+              type="password"
+              name="password"
+              value={userData.password}
+              required
+            />
+          </div>
         </div>
       ) : (
         <p>Loading...</p>
       )}
       <div className="buttons">
-        <button className="profile-button">Edit Profile</button>
-        <button className="profile-button">Change Password</button>
+        <button className="profile-button">Save Profile</button>
       </div>
     </div>
   );

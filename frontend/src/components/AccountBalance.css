@@ -1,0 +1,72 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+  font-size: 18px; /* 放大整體字體 */
+}
+
+.balance-container {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 400px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.balance-container h1 {
+  margin-bottom: 20px;
+  font-size: 28px; /* 放大標題字體 */
+  color: #333;
+}
+
+.balance-list {
+  margin-bottom: 20px;
+}
+
+.balance-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.balance-list li {
+  font-size: 20px; /* 放大列表字體 */
+  margin: 5px 0;
+}
+
+.balance-form {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 20px; /* 放大標籤字體 */
+}
+
+.form-group select,
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 18px; /* 放大輸入框字體 */
+}
+
+.loading {
+  font-size: 24px;
+  color: #333;
+}

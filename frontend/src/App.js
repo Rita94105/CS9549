@@ -5,6 +5,7 @@ import LoginForm from './components/LoginForm';
 import SignupForm from './components/RegisterForm';
 import UserProfile from './components/UserProfile';
 import HomePage from './components/HomePage';
+import AccountBalance from './components/AccountBalance';
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
         <Route path="/signup" element={<SignupForm />} />
         <Route path="/home" element={<HomePage />} />
         <Route path="/profile" element={<UserProfile />} />
+        <Route path="/balance" element={<AccountBalance />} />
       </Routes>
     </Router>
   );

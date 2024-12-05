@@ -5,6 +5,11 @@ const UserSchema = new mongoose.Schema({
   email: { type: String, required: true, unique: true },
   username: { type: String, required: true, unique: true },
   password: { type: String, required: true },
+  balances: {
+    type: Map,
+    of: Number,
+    default: { CAD: 1000 }, 
+  },
 });
 
 // 密碼加密

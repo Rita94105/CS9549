@@ -34,4 +34,15 @@ router.post('/login', async (req, res) => {
   }
 });
 
+router.get('/balance', authenticateToken, async (req, res) => {
+  try {
+    const user = await User.findById(req.userId);
+    if (!user) return res.status(404).json({ error: 'User not found' });
+
+    res.json({ balances: user.balances });
+  } catch (err) {
+    res.status(500).json({ error: 'Error fetching balance' });
+  }
+});
+
 module.exports = router;
