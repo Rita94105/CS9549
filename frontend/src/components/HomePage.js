@@ -16,7 +16,7 @@ const HomePage = () => {
     <div className="home-page">
       <h1>Welcome to Home Page</h1>
       <div className="buttons">
-      <a href="https://application-a1.1p0sj4mn37zu.ca-tor.codeengine.appdomain.cloud/" className="home-button" target="_blank" rel="noopener noreferrer">
+      <a href="https://service01.1p0sj4mn37zu.ca-tor.codeengine.appdomain.cloud/" className="home-button" target="_blank" rel="noopener noreferrer">
           Real-time and historical exchange rates (S1, S2)
         </a>
         <button className="home-button" onClick={goToBalance}>Account Balance(S4)</button>
