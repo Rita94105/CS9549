@@ -1,0 +1,11 @@
+# manifest.yml
+
+applications:
+- name: transaction-service
+  memory: 512M
+  instances: 1
+  path: target/transaction-service-1.0.0.jar
+  buildpacks:
+    - java_buildpack
+  env:
+    MONGODB_URI: "<your-mongodb-uri>"
